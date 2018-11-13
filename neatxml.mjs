@@ -1,6 +1,6 @@
 export default NeatXML;
 
-// NeatXML v1.0 Copyright ©2018 Gavin Kistner <!@phrogz.net>
+// NeatXML v0.9 Copyright ©2018 Gavin Kistner <!@phrogz.net>
 // Licensed under the "MIT License"
 // See https://github.com/Phrogz/NeatXML/LICENSE.txt for details.
 
