@@ -12,7 +12,7 @@ The `options` object accepts the following keys and values:
 
 * `indent`: if set to a number or string, each node in the supplied hierarchy will be placed on its own line and indented by the number of spaces (if a number) or by repetitions of the string specified by this option.
 * `strip`:  if set to `true`, remove leading/trailing whitespace from text nodes, and ignore whitespace-only nodes altogether.
-* `sort`:   if set to `true`, sort attributes within elements based on their name, with attributes with no namespace appear before those with a prefix.
+* `sort`:   if set to `true`, sort attributes within elements based on their name; attributes with no namespace will appear before those with a prefix.
 * `omitNS`: if set to a namespace URI string, or array of URIs, all attributes, elements, and namespace declarations matching the URI(s) will be omitted from the output. 
 * `cdata`:  if set to `true`, all text nodes will be output as CDATA sections; if set to `false`, all CDATA nodes will be output as plain text.
 
