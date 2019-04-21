@@ -13,8 +13,9 @@ The `options` object accepts the following keys and values:
 * `indent`: if set to a number or string, each node in the supplied hierarchy will be placed on its own line and indented by the number of spaces (if a number) or by repetitions of the string specified by this option.
 * `strip`:  if set to `true`, remove leading/trailing whitespace from text nodes, and ignore whitespace-only nodes altogether.
 * `sort`:   if set to `true`, sort attributes within elements based on their name; attributes with no namespace will appear before those with a prefix.
-* `omitNS`: if set to a namespace URI string, or array of URIs, all attributes, elements, and namespace declarations matching the URI(s) will be omitted from the output. 
+* `omitNS`: if set to a namespace URI string, or array of URIs, all attributes, elements, and namespace declarations matching the URI(s) will be omitted from the output.
 * `cdata`:  if set to `true`, all text nodes will be output as CDATA sections; if set to `false`, all CDATA nodes will be output as plain text.
+* `tightcdata`:  if this and `indent` are `true`, cdata nodes will start and end on the same line on their parent, with their text content on separate line(s).
 
 When using the `indent` option you will likely also want to use the `strip` option.
 
@@ -35,4 +36,5 @@ For other communication you can [email the author directly](mailto:!@phrogz.net?
 
 ## HISTORY
 
+* **v0.10 [2019-Apr-21]** — Add `tightcdata` feature.
 * **v0.9** — Initial release

@@ -1,6 +1,6 @@
 export default NeatXML;
 
-// NeatXML v0.9 Copyright ©2018 Gavin Kistner <!@phrogz.net>
+// NeatXML v0.10 Copyright ©2018 Gavin Kistner <!@phrogz.net>
 // Licensed under the "MIT License"
 // See https://github.com/Phrogz/NeatXML/LICENSE.txt for details.
 
@@ -113,5 +113,7 @@ function NeatXML(node, opts={}) {
 
 	serializer[node.nodeType](node, 0);
 
-	return out.join(opts.indent ? '\n' : '');
+	const result = out.join(opts.indent ? '\n' : '');
+
+	return (opts.tightcdata && opts.indent) ? result.replace(/(\s+)(<!\[CDATA\[)\n?([\s\S]+?)\s*(\]\]>)(\s+)/g, '$2\n$3$5$4') : result;
 }
